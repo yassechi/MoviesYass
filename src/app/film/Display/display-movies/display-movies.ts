@@ -1,4 +1,4 @@
-import { Component, input, signal } from '@angular/core';
+import { Component, input, output, signal } from '@angular/core';
 import { AllMovie, MovieModel } from '../../Models/movie-film';
 
 @Component({
@@ -12,5 +12,13 @@ export class DisplayMovies {
 
   deleteMovie() {}
 
-  sendId() {}
+  toEdit = output<MovieModel>();
+
+  clickToEdit(movie: MovieModel) {
+    this.toEdit.emit(movie);
+  }
+
+
+
+  
 }

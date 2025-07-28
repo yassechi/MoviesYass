@@ -1,31 +1,27 @@
-<div class="container">
-  <div
-    class="image-container vv"
-    style="background-image: url('https://image.tmdb.org/t/p/w500/{{movie().poster_path}}'); margin-top: 50px;">
-    <div class="typewriter-overlay">
-      <div class="typewriter-text shine-effect">
-        {{ movie().original_title }}
+
+ <div class="movies-grid ">
+
+    <div class="movie-card" tabindex="0">
+      <div
+        class="image-container"
+        style="
+        background-image: url('https://image.tmdb.org/t/p/w500/{{movie().poster_path}}');">
+        <div class="image-overlay">
+          <h2 class="movie-title-overlay">{{ movie().original_title }}</h2>
+          <p class="movie-overview-overlay">
+            {{ movie().overview.slice(0, 50) }}
+          </p>
+        </div>
       </div>
-      <div class="decorative-line"></div>
-      <div class="typewriter-subtitle">
-        {{ movie().overview.slice(0, 50) }}<br />
+      <div class="movie-info">
+        <h3 class="movie-title-info">{{ movie().original_title }}</h3>
+        <p class="movie-description">
+          {{ movie().overview }}
+        </p>
+        <!-- <button class="edit-button" onclick="editMovie('oppenheimer')">
+          Modifier
+        </button> -->
+        <!-- <button class="my_btn">Edit</button> -->
       </div>
     </div>
   </div>
-
-  <div class="overF">
-    <span
-      style="
-        display: block;
-        font-weight: bold;
-        font-size: 30px;
-        margin-bottom: 50px;
-      "
-      >{{ movie().original_title }}</span
-    >
-
-    <p>
-      {{ movie().overview }}
-    </p>
-  </div>
-</div>

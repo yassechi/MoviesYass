@@ -1,36 +1,35 @@
-<div class="allMovies">
-  <div class="container">
-    @if(items()){ @for(item of items(); track item.id){
-    <div class="container" style="height: 400px">
+
+<div class="allMovies ">
+  <div class="row">
+  @if(items()){ @for(item of items(); track item.id){
+  <div class="movies-grid  col-lg-2 col-md-4 col-sm-6 col-12">
+    <!-- Exemple de carte de film 1 -->
+    <div class="movie-card" tabindex="0">
       <div
-        class="image-container vv"
-        style="background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}');">
-        <div class="typewriter-overlay">
-          <div class="typewriter-text shine-effect">
-            {{ item.original_title }}
-          </div>
-          <div class="decorative-line"></div>
-          <div class="typewriter-subtitle">
-            {{ item.overview.slice(0, 50) }}<br />
-          </div>
+        class="image-container"
+        style="
+        background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}'); ">
+        <div class="image-overlay">
+          <h2 class="movie-title-overlay">{{ item.original_title }}</h2>
+          <p class="movie-overview-overlay">
+            {{ item.overview.slice(0, 50) + "..." }}
+          </p>
         </div>
       </div>
-
-      <div class="overF">
-        <span
-          style="
-            display: block;
-            font-weight: bold;
-            font-size: 30px;
-            margin-bottom: 50px;
-          "
-          >{{ item.original_title }}</span
-        >
-        {{ item.overview.slice(0, 150) }}
-        <button class="my_btn" (click)="sendId()">Edit</button>
+      <div class="movie-info">
+        <h3 class="movie-title-info">{{ item.original_title }}</h3>
+        <p class="movie-description">
+          {{ item.overview.slice(0, 50) }}...
+        </p>
+        <!-- <button class="edit-button" onclick="editMovie('oppenheimer')">
+          Modifier
+        </button> -->
+        <button class="my_btn" (click)="clickToEdit(item)">Edit</button>
       </div>
     </div>
-
-    } }
   </div>
+
+  <div class="col-lg-1 col-md-1"></div>
+
+  } }
 </div>

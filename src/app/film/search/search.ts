@@ -3,12 +3,7 @@ import { FilmService } from '../Service/film-service';
 import { FormsModule } from '@angular/forms';
 import { AllMovie, MovieModel } from '../Models/movie-film';
 import { DisplayMovies } from '../Display/display-movies/display-movies';
-import {
-  Router,
-  RouterLink,
-  RouterModule,
-  RouterOutlet,
-} from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { DisplayMovie } from '../Display/display-movie/display-movie';
 
 @Component({
@@ -17,7 +12,7 @@ import { DisplayMovie } from '../Display/display-movie/display-movie';
   templateUrl: './search.html',
   styleUrl: './search.scss',
 })
-export class Search   {
+export class Search {
   filmSrv = inject(FilmService);
 
   myMovies = signal<AllMovie>(<AllMovie>{});
@@ -67,10 +62,14 @@ export class Search   {
     this.NameClicked.set(true);
     this.IdClicked.set(false);
     this.AllClicked.set(false);
-
   }
 
   onChange(event: Event) {
     this.getByName();
   }
+
+  editOne = (item: MovieModel) => {
+    this.searchId = item.id.toString();
+    this.getById();
+  };
 }
