@@ -1,0 +1,168 @@
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1 class="form-title">Inscription</h1>
+            <p class="form-subtitle">Créez votre compte en quelques étapes</p>
+        </div>
+        
+        <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-grid">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="required">Prénom</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName" 
+                                placeholder="Votre prénom"
+                                required
+                                minlength="2"
+                                autocomplete="given-name"
+                            >
+                        </div>
+                        <div class="error-message">Le prénom doit contenir au moins 2 caractères</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName" class="required">Nom</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName" 
+                                placeholder="Votre nom de famille"
+                                required
+                                minlength="2"
+                                autocomplete="family-name"
+                            >
+                        </div>
+                        <div class="error-message">Le nom doit contenir au moins 2 caractères</div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" class="required">Email</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="votre@email.com"
+                                required
+                                autocomplete="email"
+                            >
+                        </div>
+                        <div class="error-message">Veuillez entrer une adresse email valide</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <div class="input-wrapper">
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                placeholder="06 12 34 56 78"
+                                pattern="[0-9\s\-\+\(\)]{10,}"
+                                autocomplete="tel"
+                            >
+                        </div>
+                        <div class="error-message">Veuillez entrer un numéro de téléphone valide</div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password" class="required">Mot de passe</label>
+                        <div class="input-wrapper password-wrapper">
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Votre mot de passe"
+                                required
+                                minlength="8"
+                                autocomplete="new-password"
+                            >
+                            <button type="button" class="password-toggle" aria-label="Afficher/masquer le mot de passe">
+                                👁️
+                            </button>
+                        </div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <div class="strength-text">Entrez un mot de passe</div>
+                        </div>
+                        <div class="password-requirements" id="passwordRequirements">
+                            <div class="requirement" data-requirement="length">Au moins 8 caractères</div>
+                            <div class="requirement" data-requirement="uppercase">Une lettre majuscule</div>
+                            <div class="requirement" data-requirement="lowercase">Une lettre minuscule</div>
+                            <div class="requirement" data-requirement="number">Un chiffre</div>
+                            <div class="requirement" data-requirement="special">Un caractère spécial</div>
+                        </div>
+                        <div class="error-message">Le mot de passe ne respecte pas les critères requis</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword" class="required">Confirmer le mot de passe</label>
+                        <div class="input-wrapper password-wrapper">
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword" 
+                                placeholder="Confirmez votre mot de passe"
+                                required
+                                autocomplete="new-password"
+                            >
+                            <button type="button" class="password-toggle" aria-label="Afficher/masquer le mot de passe">
+                                👁️
+                            </button>
+                        </div>
+                        <div class="error-message">Les mots de passe ne correspondent pas</div>
+                    </div>
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="message">Message (optionnel)</label>
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            placeholder="Parlez-nous un peu de vous..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Créer mon compte</span>
+                </button>
+            </div>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            ✓ Votre compte a été créé avec succès ! Bienvenue dans notre communauté.
+        </div>
+    </div>
+
+    <script>
+        
+    </script>
+</body>
+
+
+<!-- <form #contactForm>
+  <input #passwordInput type="password">
+  <input #confirmPasswordInput type="password">
+  <div #passwordStrength></div>
+  <div #passwordRequirements></div>
+  <input #phoneInput type="tel">
+  <button #submitButton type="submit">
+    <span class="button-text">Créer mon compte</span>
+  </button>
+</form>
+<div #successMessage></div> -->

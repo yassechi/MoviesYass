@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "yassTK": {
+    "MoviesYass": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -59,10 +59,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "yassTK:build:production"
+              "buildTarget": "MoviesYass:build:production"
             },
             "development": {
-              "buildTarget": "yassTK:build:development"
+              "buildTarget": "MoviesYass:build:development"
             }
           },
           "defaultConfiguration": "development"

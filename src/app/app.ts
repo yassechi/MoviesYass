@@ -16,7 +16,7 @@ import { Menu } from './film/menu/menu';
   styleUrl: './app.scss',
 })
 export class App implements AfterViewInit {
-  protected readonly title = signal('yassTK');
+  protected readonly title = signal('MoviesYass');
 
   // Signaux pour la gestion d'état réactive
   protected readonly estMenuMobileOuvert = signal(false);

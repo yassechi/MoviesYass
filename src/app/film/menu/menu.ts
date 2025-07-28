@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
 export class Menu {
   search() {}
 
-  protected readonly title = signal('yassTK');
+  protected readonly title = signal('MoviesYass');
 
   // Signaux pour la gestion d'état réactive
   protected readonly estMenuMobileOuvert = signal(false);
