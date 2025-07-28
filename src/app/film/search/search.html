@@ -1,5 +1,4 @@
-
-<div class="all">
+<div class="allSearch">
   <button class="my_btn" (click)="getAllMovies()">All movies</button>
 
   <div>
@@ -10,17 +9,22 @@
   </div>
 
   <div>
-    <input class="inp" id="inp-name" type="text" [(ngModel)]="searchName" (input)="onChange($event)" />
+    <input
+      class="inp"
+      id="inp-name"
+      type="text"
+      [(ngModel)]="searchName"
+      (input)="onChange($event)"
+    />
     <button (click)="getByName()" class="my_btn">Nom</button>
   </div>
 </div>
 
-
 <!-- <router-outlet/> -->
- @if(AllClicked()){
-    <app-display-movies [items]="myMovies().results" />
- } @else if (IdClicked()) {
-    <app-display-movie [movie]="myMovie()"/>
- }@else if (NameClicked()) {
-    <app-display-movies [items]="myMovies().results"/>
- }
+@if(AllClicked()){
+<app-display-movies [items]="myMovies().results" />
+} @else if (IdClicked()) {
+<app-display-movie [movie]="myMovie()" />
+}@else if (NameClicked()) {
+<app-display-movies [items]="myMovies().results" />
+}

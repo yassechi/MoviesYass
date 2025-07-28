@@ -13,7 +13,7 @@ import { DisplayMovie } from '../Display/display-movie/display-movie';
 
 @Component({
   selector: 'app-search',
-  imports: [FormsModule, DisplayMovies, RouterModule, DisplayMovie],
+  imports: [FormsModule, RouterModule, DisplayMovies, DisplayMovie],
   templateUrl: './search.html',
   styleUrl: './search.scss',
 })

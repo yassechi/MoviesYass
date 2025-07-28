@@ -3,7 +3,7 @@ import { Search } from "../search/search";
 import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-movies',
-  imports: [Search, RouterOutlet],
+  imports: [Search],
   templateUrl: './movies.html',
   styleUrl: './movies.scss',
 })

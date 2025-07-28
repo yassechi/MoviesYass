@@ -26,6 +26,4 @@ export class FilmService {
       `https://api.themoviedb.org/3/search/movie?query=${name}&language=en-US&page=1&include_adult=false&api_key=ec34149ae2e6888f5db3c4706267dfd5`
     );
   };
-
-
 }

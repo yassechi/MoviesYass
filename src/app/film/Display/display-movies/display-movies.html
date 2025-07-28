@@ -1,54 +1,36 @@
-<!-- 
-<div class="container-fluid main-movie">
-<div class="container-fluid row " style="width: 95%; margin: 10px 25px 10px auto;">
-    @if(items()){
-     @for(item of items().results; track item.id){
-        <div class="card-movie col-lg-2 col-md-4 col-sm-1 col-12 image-container " style="background-image: url('https://image.tmdb.org/t/p/w500/{{ item.poster_path }}'); background-size: cover; background-repeat: no-repeat; background-position: center; margin: 10px; padding: 0; border-radius: 10px; box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); ">
-            <img  class="img-fluid" src='https://image.tmdb.org/t/p/w500/{{ item.poster_path }}'  />
-            <p >Name: {{ item.id }}</p>
-            <p >Descreption: {{ item.original_title }}</p>
-            <p >Id: {{ item.overview.slice(0, 50) }}</p>
-            <button class="btn"(click)="deleteMovie()">supprimer</button>
-        <button (click)="deleteMovie()" type="button" class="btn btn-primary">supprimer</button>
+<div class="allMovies">
+  <div class="container">
+    @if(items()){ @for(item of items(); track item.id){
+    <div class="container" style="height: 400px">
+      <div
+        class="image-container vv"
+        style="background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}');">
+        <div class="typewriter-overlay">
+          <div class="typewriter-text shine-effect">
+            {{ item.original_title }}
+          </div>
+          <div class="decorative-line"></div>
+          <div class="typewriter-subtitle">
+            {{ item.overview.slice(0, 50) }}<br />
+          </div>
         </div>
+      </div>
 
-    } 
-}
-</div>
-
-</div> -->
-<div class="all container">
-  @if(items()){ @for(item of items(); track item.id){
-  <div class="container" style="height: 400px">
-    <div
-      class="image-container vv"
-      style="background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}');"
-    >
-      <div class="typewriter-overlay">
-        <div class="typewriter-text shine-effect">
-          {{ item.original_title }}
-        </div>
-        <div class="decorative-line"></div>
-        <div class="typewriter-subtitle">
-          {{ item.overview.slice(0, 50) }}<br />
-        </div>
+      <div class="overF">
+        <span
+          style="
+            display: block;
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 50px;
+          "
+          >{{ item.original_title }}</span
+        >
+        {{ item.overview.slice(0, 150) }}
+        <button class="my_btn" (click)="sendId()">Edit</button>
       </div>
     </div>
 
-    <div class="overF">
-      <span
-        style="
-          display: block;
-          font-weight: bold;
-          font-size: 30px;
-          margin-bottom: 50px;
-        "
-        >{{ item.original_title }}</span
-      >
-      {{ item.overview.slice(0, 150) }}
-      <button class="my_btn" (click)="sendId()">Edit</button>
-    </div>
+    } }
   </div>
-
-  } }
 </div>

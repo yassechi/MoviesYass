@@ -1,20 +1,19 @@
-.all{
-    background-color: rgb(40, 43, 40);
-    padding: 50px;
+.allMovies {
+  background-color: rgb(40, 43, 40);
+  padding: 50px;
+  height: auto;
 }
 
-.overF{
-    position: relative;
-    left: 40%;
-    width: 50%;
-    bottom: 400px;
-    // background-color: #f39c12;
-    font-size: 20px;
-    color: #ecf0f1;
-    font-style: italic;
+.overF {
+  position: relative;
+  left: 40%;
+  width: 50%;
+  bottom: 400px;
+  font-size: 20px;
+  color: #ecf0f1;
+  font-style: italic;
 }
 .image-container {
-
   position: relative;
   width: 400px;
   height: 400px;
@@ -258,19 +257,28 @@
 }
 
 .my_btn {
-  height: 35px;
-  min-width: 50px;
-  background-color: rgb(129, 9, 9);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   color: white;
-  font-weight: 800;
-}
-.my_btn:hover {
-  background-color: grey;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-top: 20px;
 }
 
-.my_btn-id:hover {
-  background-color: grey;
+.my_btn:hover {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
 }

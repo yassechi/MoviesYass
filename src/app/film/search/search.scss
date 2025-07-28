@@ -1,19 +1,26 @@
 .my_btn {
-  height: 35px;
-  min-width: 50px;
-  background-color: rgb(129, 9, 9);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
   color: white;
-  font-weight: 800;
-}
-.my_btn:hover {
-  background-color: grey;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.my_btn-id:hover {
-  background-color: grey;
+.my_btn:hover {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
 }
 
 .cont {
@@ -22,15 +29,19 @@
 }
 
 .inp {
-  height: 35px;
-  width: 150px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  margin-right: 5px;
 }
 
-.all {
+.allSearch {
   margin-top: 50px;
   display: flex;
   justify-content: space-around;

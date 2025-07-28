@@ -5,10 +5,8 @@ import { MovieModel } from '../../Models/movie-film';
   selector: 'app-display-movie',
   imports: [],
   templateUrl: './display-movie.html',
-  styleUrl: './display-movie.scss'
+  styleUrl: './display-movie.scss',
 })
 export class DisplayMovie {
-
   movie = input.required<MovieModel>();
-
 }
