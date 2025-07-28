@@ -17,30 +17,38 @@
 </div>
 
 </div> -->
-<div class="all">
-    @if(items()){ @for(item of items().results; track item.id){
-<div class="container ">
-
-      <div
-        class="image-container vv"
-        style="background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}')">
-        <div class="typewriter-overlay">
-          <div class="typewriter-text shine-effect">
-            {{ item.original_title }}
-          </div>
-          <div class="decorative-line"></div>
-          <div class="typewriter-subtitle">
-            {{ item.overview.slice(0, 50) }}<br />
-          </div>
+<div class="all container">
+  @if(items()){ @for(item of items(); track item.id){
+  <div class="container" style="height: 400px">
+    <div
+      class="image-container vv"
+      style="background-image: url('https://image.tmdb.org/t/p/w500/{{item.poster_path}}');"
+    >
+      <div class="typewriter-overlay">
+        <div class="typewriter-text shine-effect">
+          {{ item.original_title }}
+        </div>
+        <div class="decorative-line"></div>
+        <div class="typewriter-subtitle">
+          {{ item.overview.slice(0, 50) }}<br />
         </div>
       </div>
+    </div>
 
-      <div class="overF">
-         {{ item.overview }}
-      </div>
-</div>
+    <div class="overF">
+      <span
+        style="
+          display: block;
+          font-weight: bold;
+          font-size: 30px;
+          margin-bottom: 50px;
+        "
+        >{{ item.original_title }}</span
+      >
+      {{ item.overview.slice(0, 150) }}
+      <button class="my_btn" (click)="sendId()">Edit</button>
+    </div>
+  </div>
 
-} }
-
-    
+  } }
 </div>

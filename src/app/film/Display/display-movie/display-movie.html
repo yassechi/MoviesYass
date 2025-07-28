@@ -1,0 +1,33 @@
+
+
+<div class="container" >
+  <div
+    class="image-container vv"
+    style="background-image: url('https://image.tmdb.org/t/p/w500/{{movie().poster_path}}'); margin-top: 50px;">
+    <div class="typewriter-overlay">
+      <div class="typewriter-text shine-effect">
+        {{ movie().original_title }}
+      </div>
+      <div class="decorative-line"></div>
+      <div class="typewriter-subtitle">
+        {{ movie().overview.slice(0, 50) }}<br />
+      </div>
+    </div>
+  </div>
+
+  <div class="overF">
+    <span
+      style="
+        display: block;
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 50px;
+      "
+      >{{ movie().original_title }}</span
+    >
+
+    <p>
+      {{ movie().overview }}
+    </p>
+  </div>
+</div>

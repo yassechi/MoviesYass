@@ -1,0 +1,38 @@
+.my_btn {
+  height: 35px;
+  min-width: 50px;
+  background-color: rgb(129, 9, 9);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-weight: 800;
+}
+.my_btn:hover {
+  background-color: grey;
+}
+
+.my_btn-id:hover {
+  background-color: grey;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+}
+
+.inp {
+  height: 35px;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.all {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}

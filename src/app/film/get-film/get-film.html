@@ -1,8 +1,0 @@
-
-@let moviess = movies$ | async;
-
-<button (click)="getAllMovies()">Go</button>
-
-@if (moviess) {
-    <app-display-movies [items]="moviess"/>
-}
